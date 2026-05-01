@@ -1,0 +1,9 @@
+numpy>=1.26.0
+opencv-python
+tensorflow
+pyttsx3
+cvzone
+pillow
+pyenchant
+protobuf
+mediapipe
