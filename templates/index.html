@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Language To Text</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <h1>Sign Language To Text</h1>
+          <p id="status">Camera idle</p>
+        </div>
+        <div class="controls">
+          <button id="startBtn" type="button">Start</button>
+          <button id="stopBtn" type="button" disabled>Stop</button>
+          <button id="speakBtn" type="button">Speak</button>
+          <button id="clearBtn" type="button">Clear</button>
+        </div>
+      </header>
+
+      <section class="workspace">
+        <div class="camera-panel">
+          <video id="video" autoplay playsinline muted></video>
+          <canvas id="captureCanvas" width="480" height="360" hidden></canvas>
+        </div>
+
+        <aside class="result-panel">
+          <div class="symbol-block">
+            <span>Character</span>
+            <strong id="symbol">-</strong>
+          </div>
+          <img id="skeleton" alt="Detected hand skeleton">
+        </aside>
+      </section>
+
+      <section class="text-band">
+        <label for="sentence">Sentence</label>
+        <textarea id="sentence" readonly></textarea>
+      </section>
+
+      <section class="suggestions" aria-label="Suggestions">
+        <button class="suggestion" type="button" data-index="1"></button>
+        <button class="suggestion" type="button" data-index="2"></button>
+        <button class="suggestion" type="button" data-index="3"></button>
+        <button class="suggestion" type="button" data-index="4"></button>
+      </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+  </body>
+</html>
