@@ -1,8 +1,9 @@
 numpy>=1.26.0
 opencv-python
 tensorflow
+flask
+waitress
 pyttsx3
-cvzone
 pillow
 pyenchant
 protobuf

@@ -3,9 +3,9 @@ setlocal
 cd /d "%~dp0"
 
 if exist "..\.venv\Scripts\python.exe" (
-    "..\.venv\Scripts\python.exe" final_pred.py
+    "..\.venv\Scripts\python.exe" app.py
 ) else (
-    python final_pred.py
+    python app.py
 )
 
 pause

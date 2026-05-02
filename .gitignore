@@ -7,3 +7,6 @@ venv/
 env/
 *.log
 *.tmp
+.env
+.env.*
+!.env.example
